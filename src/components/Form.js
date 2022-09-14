@@ -1,5 +1,8 @@
-import React from "react";
-function Form({search, setSearch}) {
+import React, { useContext } from "react";
+import {UserContext} from "../App"
+
+function Form() {
+	const  {search, setSearch}  = useContext(UserContext);
 
 	return (
 		<>

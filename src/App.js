@@ -32,8 +32,8 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
-			<UserContext.Provider value={{ users}}>
-				<Form search={search} setSearch={setSearch} />
+			<UserContext.Provider value={{ users, search, setSearch }}>
+				<Form />
 				{loading ? <p>...fetching data</p> : <UserList users={users} />}
 			</UserContext.Provider>
 		</div>
