@@ -1,8 +1,5 @@
-import React, { useContext } from "react";
-import { UserContext } from "./../App";
-
-function UserSearch() {
-	const { search, setSearch } = useContext(UserContext);
+import React from "react";
+function Form({search, setSearch}) {
 
 	return (
 		<>
@@ -18,4 +15,4 @@ function UserSearch() {
 	);
 }
 
-export default UserSearch;
+export default Form;

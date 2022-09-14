@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import Header from "./components/Header";
-import UserSearch from "./components/Form";
+import Form from "./components/Form";
 import UserList from "./components/UserList";
 import "./App.css";
 
@@ -32,8 +32,8 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
-			<UserContext.Provider value={{ users, search, setSearch }}>
-				<UserSearch />
+			<UserContext.Provider value={{ users}}>
+				<Form search={search} setSearch={setSearch} />
 				{loading ? <p>...fetching data</p> : <UserList users={users} />}
 			</UserContext.Provider>
 		</div>

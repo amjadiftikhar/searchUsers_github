@@ -12,7 +12,7 @@ function User({ user }) {
 	return (
 		<div className="userList">
 			<a href={user.url} onClick={showDetails}>
-				<img src={user.avatar_url} />
+				<img src={user.avatar_url} alt="avatar" />
 				{user.login}
 			</a>
 			{showUserDetails && <UserDetails user={user} />}
